@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'logo-grab.svg') }}" type="image/jpg" />
+
+    <title>Grab - Login</title>
+  </head>
+  <body>
+    <div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <img src="{{ url_for('static', filename = 'logo-grab.svg') }}" width="150px" height="200px" alt="" />
+
+          <i class="fas fa-user icon"></i>
+          <input type="email" name="email" placeholder="E-mail" />
+          <input type="password" name="password" placeholder="Senha" />
+          <button>Sign In</button>
+          <p>Problemas para entrar?</p>
+          <a href="#">Clique aqui</a>
+        </form>
+      </div>
+      <div class="imagem">
+        <img
+          src="{{ url_for('static', filename = 'undraw_interview_rmcf.svg') }}"
+          width="900px"
+          height="100%"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
