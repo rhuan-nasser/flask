@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'logo.png') }}" type="image/jpg" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <div class="form-container sign-in-container">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul id="messages" class="list-unstyled">
+              {% for message in messages %}
+                <li class="alert alert-success">{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+      {% endwith %}
+
+        <form action="/verifica" method="post">
+          <img src="https://verificador.iti.gov.br/verifier-2.7/logo.png" width="200px" height="100px" alt="" />
+
+          <i class="fas fa-use r icon"></i>
+          <input type="login" name="login" placeholder="Login" />
+          <input type="password" name="password" placeholder="Senha" />
+          <button>Entrar</button>
+          <p>Problemas para entrar?</p>
+          <a href="#">Clique aqui</a>
+        </form>
+      </div>
+      <div class="imagem">
+        <img
+          src="{{ url_for('static', filename = 'undraw_interview_rmcf.svg') }}"
+          width="900px"
+          height="100%"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
